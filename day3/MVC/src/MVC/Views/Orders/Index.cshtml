@@ -1,0 +1,25 @@
+﻿@model IEnumerable<MVC.Data.Order>
+@{
+    ViewBag.Title = "All Orders";
+}
+
+<table class="table">
+    <tr><td>Id</td><td>Order Name</td><td>Total Price</td><td></td><td></td></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.OrderName</td>
+            <td>@item.TotalPrice</td>
+            <td>
+                <a asp-controller="Orders" asp-action="Update" asp-route-id="@item.Id">Edit</a>
+            </td>
+            <td>
+                <a asp-controller="Orders" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+<a asp-controller="Orders" asp-action="Create" class="btn btn-default btn-default">
+    Add New Order
+</a>
