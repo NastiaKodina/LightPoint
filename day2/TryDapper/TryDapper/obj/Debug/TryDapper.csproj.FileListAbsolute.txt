@@ -1,0 +1,8 @@
+E:\TryDapper\TryDapper\bin\Debug\TryDapper.exe.config
+E:\TryDapper\TryDapper\obj\Debug\TryDapper.csprojResolveAssemblyReference.cache
+E:\TryDapper\TryDapper\bin\Debug\TryDapper.exe
+E:\TryDapper\TryDapper\bin\Debug\TryDapper.pdb
+E:\TryDapper\TryDapper\bin\Debug\Dapper.dll
+E:\TryDapper\TryDapper\bin\Debug\Dapper.xml
+E:\TryDapper\TryDapper\obj\Debug\TryDapper.exe
+E:\TryDapper\TryDapper\obj\Debug\TryDapper.pdb

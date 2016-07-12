@@ -1,0 +1,10 @@
+E:\HomeworkCodeFirst\HomeworkCodeFirst\bin\Debug\HomeworkCodeFirst.exe.config
+E:\HomeworkCodeFirst\HomeworkCodeFirst\bin\Debug\HomeworkCodeFirst.exe
+E:\HomeworkCodeFirst\HomeworkCodeFirst\bin\Debug\HomeworkCodeFirst.pdb
+E:\HomeworkCodeFirst\HomeworkCodeFirst\bin\Debug\EntityFramework.dll
+E:\HomeworkCodeFirst\HomeworkCodeFirst\bin\Debug\EntityFramework.SqlServer.dll
+E:\HomeworkCodeFirst\HomeworkCodeFirst\bin\Debug\EntityFramework.xml
+E:\HomeworkCodeFirst\HomeworkCodeFirst\bin\Debug\EntityFramework.SqlServer.xml
+E:\HomeworkCodeFirst\HomeworkCodeFirst\obj\Debug\HomeworkCodeFirst.csprojResolveAssemblyReference.cache
+E:\HomeworkCodeFirst\HomeworkCodeFirst\obj\Debug\HomeworkCodeFirst.exe
+E:\HomeworkCodeFirst\HomeworkCodeFirst\obj\Debug\HomeworkCodeFirst.pdb
