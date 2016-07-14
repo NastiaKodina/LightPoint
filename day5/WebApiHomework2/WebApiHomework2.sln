@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{87226E01-B264-4291-AF60-788A34CFEDCC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D117BD6B-E9D7-4F13-BFF5-C4460D969C33}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WebApiHomework2", "src\WebApiHomework2\WebApiHomework2.xproj", "{488CDBB8-1202-44B5-8194-D8B9F435C824}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{488CDBB8-1202-44B5-8194-D8B9F435C824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{488CDBB8-1202-44B5-8194-D8B9F435C824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{488CDBB8-1202-44B5-8194-D8B9F435C824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{488CDBB8-1202-44B5-8194-D8B9F435C824}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{488CDBB8-1202-44B5-8194-D8B9F435C824} = {87226E01-B264-4291-AF60-788A34CFEDCC}
+	EndGlobalSection
+EndGlobal
