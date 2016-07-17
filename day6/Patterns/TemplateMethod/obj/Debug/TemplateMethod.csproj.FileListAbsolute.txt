@@ -1,0 +1,6 @@
+E:\Patterns\TemplateMethod\bin\Debug\TemplateMethod.exe.config
+E:\Patterns\TemplateMethod\bin\Debug\TemplateMethod.exe
+E:\Patterns\TemplateMethod\bin\Debug\TemplateMethod.pdb
+E:\Patterns\TemplateMethod\obj\Debug\TemplateMethod.csprojResolveAssemblyReference.cache
+E:\Patterns\TemplateMethod\obj\Debug\TemplateMethod.exe
+E:\Patterns\TemplateMethod\obj\Debug\TemplateMethod.pdb
