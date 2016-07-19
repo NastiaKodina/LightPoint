@@ -1,0 +1,7 @@
+.wrapper{
+    column-count:4;
+    list-style-type:none;
+}
+li{
+     list-style-type:none;
+}

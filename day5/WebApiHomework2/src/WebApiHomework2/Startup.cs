@@ -45,7 +45,7 @@ namespace WebApiHomework2
             services.AddIdentity<User, IdentityRole>(o => o.Cookies.ApplicationCookie.AutomaticChallenge = false)
                .AddEntityFrameworkStores<ApplicationContext>()
                .AddDefaultTokenProviders();
-
+            services.AddCors();
             services.AddMvc();
             SampleDataGenerator.Initialize(services.BuildServiceProvider());
         }
@@ -60,6 +60,7 @@ namespace WebApiHomework2
 
             app.UseApplicationInsightsExceptionTelemetry();
             app.UseIdentity();
+            app.UseCors(builder => builder.WithOrigins("http://example.com"));
             app.UseMvc();
         }
     }
