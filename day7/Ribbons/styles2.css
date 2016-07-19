@@ -1,0 +1,160 @@
+body {
+	color: blue;
+	font: 16px Tahoma, sans-serif;
+	margin: 0;
+    padding: 0;
+}
+
+.wrapper header{
+	background-color: #f8f8f8;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #f8f8f8;
+	height: 100px;
+	word-wrap: break-word;
+
+}
+
+.wrapper header .header-text{
+}
+
+.ribbon {
+  display: inline-block;
+  width: 48%;
+  height: 188px;
+  position: relative;
+  float: left;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  color: white;
+  text-align: center;
+}
+
+.ribbon4{
+  display: inline-block;
+  position: absolute;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 15px;
+  background: red;
+  left: -8px;
+  top: 20px;
+  border-radius: 5px 0 0 5px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+}
+
+.triangle
+{
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-right: 15px solid #f8f8f8;
+	border-bottom: 25px solid transparent;
+	top:20px;
+	left: 265px;
+	position: absolute;
+
+}
+
+
+.ribbon4:before, .ribbon4:after {
+   	content: "";
+   	display: block;
+    position: absolute;
+}
+.ribbon4:before {
+    width: 5px;
+    height: 5px;
+    background: rgba(0,0,0,0.35);
+    top: -5px;
+    left: 1px;
+    border-radius: 5px 0 0 5px;
+    z-index: 1;
+}
+.ribbon4:after {	
+    width: 7px;
+    height: 100%;
+    padding: 0 0 7px;
+    top: -7px;
+    left: -1px;
+    background: inherit;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+
+ }
+
+ .ribbon3 {
+  display: inline-block;
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  padding-right: 15px;
+  background:  darkblue;
+  right: -40px;
+  top: -50px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+}
+.ribbon3:before, .ribbon3:after {
+    content: "";
+    position: absolute;
+}
+.ribbon3:before {
+   height: 0;
+   width: 0;
+   border-top: 25px solid transparent;
+   border-bottom: 25px solid transparent;
+   border-right: 15px solid darkblue;
+   right: 165px;
+
+}
+.ribbon3:after {
+  height: 0;
+  width: 0;
+  border-bottom: 8px solid black;
+  border-right: 8px solid transparent;
+  top: -8px;
+  right: 0px;
+}
+
+.left-content img{
+	float: left;
+	padding: 10px;
+	margin-left: 20px;
+	margin-top: -175px;
+}
+.right-content p{
+	margin-top: 60px;
+	margin-left: 800px;
+	padding: 20px;
+	border-left: 4px solid grey;
+	position: absolute;
+	text-align: justify;
+}
+.blue-button{
+	float: left;
+	padding: 20px;
+	color: white;
+	width: 655px;
+	background: radial-gradient(circle farthest-corner at 0px 50px, aqua, darkblue);
+	text-align: center;
+}
+
+.bottom-content{
+	margin-left: 30px;
+	margin-top: 550px;
+	margin-bottom: 50px;
+}
+
+.images{
+	margin-left: 900px;
+}
+
+.images img{
+	margin-left:20px;
+	margin-right: 20px;
+
+}
