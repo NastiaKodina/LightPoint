@@ -12,7 +12,7 @@ var basketModule = (function() {
             return basket.length;
         },
         deleteItem: function(id) {
-            return basket.splice(id,1);
+            basket.splice(id,1);
         },
         getTotalItemsCount: function() {
            var itemCount = this.getItemCount(),totalCount=0;
@@ -26,12 +26,10 @@ var basketModule = (function() {
                             if (obj1.item < obj2.item) return -1;
                             if (obj1.item > obj2.item) return 1;
                              return 0;});
-            return 1;
         }, 
         sortByPrice: function(){
             basket.sort(function(obj1, obj2) {
                 return obj1.price-obj2.price;});
-            return 1;
         }
     }
 }());
