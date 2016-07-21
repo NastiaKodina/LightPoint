@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"> 
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>My little Shop</h1>
+    </header>
+
+    <div class="mainTable">
+      <h2>Catalog of items</h2>
+      <table id="tableBlock"></table>     
+    </div>
+  <div class="createBlock">
+    <h3 id="headerItem">Add Item</h3>
+    <table>
+      <tr><td><input type="hidden" id="editId" /></td><td></td></tr>
+      <tr><td><label>Name: </label></td><td><input type="text" id="addName" /></td></tr>
+      <tr><td><label>Description: </label></td><td><input type="text" id="addDescription" /></td></tr>
+      <tr><td><label>Price: </label></td><td><input type="number" id="addPrice" /></td></tr>
+      <tr><td><label>Count: </label></td><td><input type="number" id="addCount" /></td></tr>
+    </table>
+    <button id="addItem" onclick="addItem()">Save</button>
+    <button id="editItem" onclick="editItem()">Save</button>
+  </div>
+  </div>
+  <footer>
+  <h2>You can call us all the time</h2>
+  </footer>
+
+
+  <script>
+    window.onload = fillTable;
+    function fillTable(){
+      var strResult = "<tr><th>Number</th><th>Name</th><th>Description</th><th>Price</th><th>Count</th></tr>";
+      var items = shop.getItems();
+      items.forEach(function (item, i, arr) {
+        strResult+= '<tr><td>' + (i + 1) + '</td><td>' + item.name + '</td><td>' + item.description + '</td><td>' + item.price + '</td><td>' + item.count + '</td><td><a href onclick="deleteItem('+ i +')" id=' + i + '> delete </a></td><td><a href onclick="showEditFields('+ i +'); return false;" id=' + i + '> edit </a></td></tr>';
+      });
+      document.getElementById("tableBlock").innerHTML = strResult;
+    };
+
+    function deleteItem(id){
+      shop.deleteItem(id);
+      fillTable();
+    };
+
+    function addItem(){
+      var name = document.getElementById("addName").value;
+      var description = document.getElementById("addDescription").value;
+      var price = document.getElementById("addPrice").value;
+      var count = document.getElementById("addCount").value;
+      var item = {name: name, description: description, price: price, count: count};
+      var countItems = shop.getItemCount();
+      shop.addItem(item);
+      location.reload();
+    };
+
+      function showEditFields(id){
+        document.getElementById("addItem").style.display='none';
+        document.getElementById("editItem").style.display='block';
+        var item = shop.getItem(id);
+        document.getElementById("headerItem").innerHTML = "Edit Item";
+        document.getElementById("addName").value = item.name;
+        document.getElementById("addDescription").value = item.description;
+        document.getElementById("addPrice").value = item.price;
+        document.getElementById("addCount").value = item.count;
+        document.getElementById("editId").value = id;
+      };
+
+      function editItem(){
+        var name = document.getElementById("addName").value;
+        var description = document.getElementById("addDescription").value;
+        var price = document.getElementById("addPrice").value;
+        var count = document.getElementById("addCount").value;
+        var id = document.getElementById("editId").value;
+        var item = {name: name, description: description, price: price, count: count};
+        shop.editItem(id,item);
+        location.reload();
+
+       
+      }
+
+
+
+
+
+  </script>
+
+</body>
+</html>
