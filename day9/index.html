@@ -29,7 +29,7 @@
   </div>
   </div>
   <footer>
-  <h2>You can call us all the time</h2>
+      <h2>You can call us all the time</h2>
   </footer>
 
 
@@ -46,7 +46,7 @@
 
     function deleteItem(id){
       shop.deleteItem(id);
-      fillTable();
+      location.reload();
     };
 
     function addItem(){
@@ -54,15 +54,21 @@
       var description = document.getElementById("addDescription").value;
       var price = document.getElementById("addPrice").value;
       var count = document.getElementById("addCount").value;
-      var item = {name: name, description: description, price: price, count: count};
-      var countItems = shop.getItemCount();
-      shop.addItem(item);
-      location.reload();
+      if (count!="" && name!="" && description!="" && price!=""){
+          var item = {name: name, description: description, price: price, count: count};
+          var countItems = shop.getItemCount();
+          shop.addItem(item);
+          location.reload();
+      }
     };
 
       function showEditFields(id){
+        var table = document.getElementById("tableBlock");
+        table.style.backgroundColor = "white";
         document.getElementById("addItem").style.display='none';
         document.getElementById("editItem").style.display='block';
+        
+        table.rows[id+1].style.backgroundColor = "grey";
         var item = shop.getItem(id);
         document.getElementById("headerItem").innerHTML = "Edit Item";
         document.getElementById("addName").value = item.name;

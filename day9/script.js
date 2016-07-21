@@ -6,9 +6,9 @@
                  {name:'pillow',description:'Something', price:50,count:8}]; 
     var basket = [];
 
-    if (localStorage.length == 0) {
+    /*if (localStorage.length == 0) {
         fromArrayToLocalStorage(initialization);
-    }
+    }*/
 
     function fromArrayToLocalStorage(arr){
         localStorage.clear();
