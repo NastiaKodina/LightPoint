@@ -1,0 +1,17 @@
+    <div class="modal" role="dialog" tabindex="-1" id="deleteModalPopUp">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" ng-click="$hide()">&times;</button>
+                    <h3 class="modal-title">Delete Person</h3>
+                </div>
+                <div class="modal-body modal-body-style">
+                    <p>Are you sure you want to remove <strong>{{personToDelete.firstName}} {{personToDelete.lastName}}</strong> from the list?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click="$hide()">Cancel</button>
+                    <button type="button" class="btn btn-primary" ng-click="deletePerson(personToDelete);$hide()">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>

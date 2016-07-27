@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>My Contacts</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	</head>
+	<body ng-app="personApp" ng-init="active='contacts'">
+
+		<div class ="wrapper">
+
+			<div id="menu" >
+				<nav class="{{active}}" ng-click="$event.preventDefault()">
+					<a href="#" class="contacts" ng-click="active='contacts'">Contacts</a>
+				</nav>
+			</div>
+
+			<div class="content" ng-controller="personController">
+				<div class="page_header">
+       				<h1 > {{active}} </h1>
+    			</div>
+    			<div class="panel">
+
+                    <div class="col-md-12">
+                        <div id="divForAlert">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+        			     <div class="bar">
+						  <input type="text" ng-model="searchString" placeholder="Enter last name or first name" />
+					    </div>
+                    </div>
+                    
+                <div class="col-md-12">
+        		    <table class="table table-striped">
+            		  <thead>
+                		<tr>
+                            <th>
+                                <a href="#" ng-click="sortType = 'lastName'; sortReverse = !sortReverse"> Last Name
+                                    <i ng-show="sortType == 'lastName' && !sortReverse" class="fa fa-caret-down"></i>
+                                    <i ng-show="sortType == 'lastName' && sortReverse" class="fa fa-caret-up"></i>
+                                </a>
+                            </th>
+                    		<th>
+                                <a href="#" ng-click="sortType = 'firstName'; sortReverse = !sortReverse"> First Name
+                                    <span ng-show="sortType == 'firstName' && !sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'firstName' && sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </th>
+                    		<th>
+                                <a href="#" ng-click="sortType = 'age'; sortReverse = !sortReverse"> Age
+                                    <span ng-show="sortType == 'age' && !sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'age' && sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </th>
+                    		<th>
+                                <a href="#" ng-click="sortType = 'address.city'; sortReverse = !sortReverse"> City
+                                    <span ng-show="sortType == 'address.city' && !sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'address.city' && sortReverse" class="fa fa-caret-up"></span>
+                                </a>      
+                            </th>
+                    		<th> 
+                    			<select class="selectpicker" name="activePhone" ng-model="activePhone">
+  									<option value="home">Home Phone Number</option>
+  									<option value="fax">Fax Phone Number</option>
+								</select>
+							</th>
+                    		<th>Actions</th>
+                		</tr>
+            		  </thead>
+            		  <tbody>
+                		<tr ng-repeat="person in list | orderBy:sortType:sortReverse | searchFor:searchString">
+                    		<td>{{person.lastName}}</td>
+                    		<td>{{person.firstName}}</td>
+                    		<td>{{person.age}}</td>
+                    		<td>{{person.address.city}}</td>
+                    		<td ng-repeat="phone in person.phoneNumber" ng-if="activePhone==phone.type">{{phone.number}}</td>          		
+                    		<td>
+                    			<button type="button" class="btn btn-default" ng-click="showEditPopUp(person)">
+                    				<span class="glyphicon glyphicon-pencil"></span></button>
+                    			<button type="button" class="btn btn-default" ng-click="showDeletePopUp(person)">
+                    				<span class="glyphicon glyphicon-trash"></span></button>
+
+                    		</td>
+             
+                		</tr>
+            		  </tbody>
+        		  </table>
+
+				<div class="add-person-btn">
+        			<button type="button" class="btn btn-default" ng-click="showAddPopUp()">
+                    	<span class="glyphicon glyphicon-plus"></span> Add New Person</button>
+                </div>
+    		  </div>
+				
+			</div>
+        </div>
+    </div>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script> 
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.8/angular-strap.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.8/angular-strap.tpl.min.js"></script>
+		<script type="text/javascript" src="personApp.js"></script>
+        <script src="persons/services/PersonService.js"></script> 
+        <script src="persons/controllers/personController.js"></script>    
+        <script src="persons/directives/searchFor.js"></script>
+
+	</body>
+</html>

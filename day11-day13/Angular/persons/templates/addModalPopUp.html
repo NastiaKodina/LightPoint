@@ -1,0 +1,77 @@
+<form id="addPersonPopUp" name="addPersonForm" class="modal" tabindex="-1" role="dialog" novalidate>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" ng-click="$hide()">&times;</button>
+                <h4>Add Person</h4>
+            </div>
+            <div class="modal-body row">
+
+                <div class="form-group col-xs-6">
+                    <label for="firstName">First Name*</label>
+                    <input type="text" class="form-control" name="firstName" id="firstName" ng-minlength="2" ng-maxlength="100" placeholder="First Name" ng-model="personToAdd.firstName" required>
+                   <div ng-messages="addPersonForm.firstName.$error">
+                        <div class="warning" ng-message="required">This field is required</div>
+                        <div class="warning" ng-message="minlength">Too short!</div>
+                        <div class="warning" ng-message="maxlength">Too long! Must be less then 100 characters!</div>
+                    </div>
+                </div>
+                <div class="form-group col-xs-6">
+                    <label for="lastName">Last Name*</label>
+                    <input type="text" class="form-control" name="lastName" id="lastName" ng-minlength="2" ng-maxlength="100" placeholder="Last Name" ng-model="personToAdd.lastName" required>
+                    <div ng-messages="addPersonForm.lastName.$error">
+                        <div class="warning" ng-message="required">This field is required</div>
+                        <div class="warning" ng-message="minlength">Too short!</div>
+                        <div class="warning" ng-message="maxlength">Too long! Must be less then 100 characters!</div>
+                    </div>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-xs-6">
+                    <label for="age">Age*</label>
+                    <input type="text" class="form-control" name="age" placeholder="Age" ng-pattern="/^\d{2}$/" ng-model="personToAdd.age" required>
+                    <div ng-messages="addPersonForm.age.$error">
+                        <div class="warning" ng-message="required">This field is required</div>
+                        <div class="warning" ng-message="pattern">Your age is between 10 and 99!</div>
+                    </div>
+                </div>
+                <div class="form-group col-xs-6">
+                    <label for="postalCode">Postal Code</label>
+                    <input type="text" class="form-control" id="postalCode" placeholder="Postal Code" ng-model="personToAdd.address.postalCode">
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-xs-6">
+                    <label for="street">Street</label>
+                    <input type="text" class="form-control" id="street" placeholder="Street" ng-model="personToAdd.address.streetAddress">
+                </div>
+                <div class="form-group col-xs-6">
+                    <label for="homeNumber">Home Number*</label>
+                    <input type="text" class="form-control" id="homeNumber" name="homeNumber" placeholder="Home Number" ng-model="personToAdd.phoneNumber[0].number" required>
+                     <div ng-messages="addPersonForm.homeNumber.$error">
+                        <div class="warning" ng-message="required">This field is required</div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group col-xs-6">
+                    <label for="city">City*</label>
+                    <input type="text" class="form-control" id="city" name="city" placeholder="City" ng-model="personToAdd.address.city" required>
+                    <div ng-messages="addPersonForm.city.$error">
+                        <div class="warning" ng-message="required">This field is required</div>
+                    </div>
+                </div>
+                
+                <div class="form-group col-xs-6">
+                    <label for="faxNumber">Fax Number*</label>
+                    <input type="text" class="form-control" id="faxNumber" name="faxNumber" placeholder="Fax Number" ng-model="personToAdd.phoneNumber[1].number" required>
+                     <div ng-messages="addPersonForm.faxNumber.$error">
+                        <div class="warning" ng-message="required">This field is required</div>
+                    </div>
+                </div>      
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" ng-click="$hide()">Cancel</button>
+                <button type="button" class="btn btn-primary" ng-disabled="addPersonForm.$invalid" ng-click="addPerson(personToAdd);$hide()">Add</button>
+            </div>
+        </div>
+    </div>
+</form>
