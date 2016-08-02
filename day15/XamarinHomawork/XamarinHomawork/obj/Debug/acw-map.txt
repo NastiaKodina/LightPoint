@@ -1,0 +1,8 @@
+XamarinHomawork.Frag, XamarinHomawork;md5b62a56383f652020227b66797057e73a.Frag
+XamarinHomawork.Frag, XamarinHomawork, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5b62a56383f652020227b66797057e73a.Frag
+XamarinHomawork.Frag;md5b62a56383f652020227b66797057e73a.Frag
+xamarinhomawork.Frag;md5b62a56383f652020227b66797057e73a.Frag
+XamarinHomawork.MainActivity, XamarinHomawork;md5b62a56383f652020227b66797057e73a.MainActivity
+XamarinHomawork.MainActivity, XamarinHomawork, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5b62a56383f652020227b66797057e73a.MainActivity
+XamarinHomawork.MainActivity;md5b62a56383f652020227b66797057e73a.MainActivity
+xamarinhomawork.MainActivity;md5b62a56383f652020227b66797057e73a.MainActivity
