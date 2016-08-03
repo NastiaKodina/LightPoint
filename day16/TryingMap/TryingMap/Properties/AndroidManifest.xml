@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="TryingMap.TryingMap" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="16" />
+
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+  
+	<application android:label="TryingMap"> 
+		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyB5hO97UZiJNFLRkvC079bI9fGRcYU4ims" />
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <service android:name=".LocationService" android:process=":location_service" android:enabled="true"/>
+    <receiver android:name="LocationBroadcastReceiver" />
+	</application>
+</manifest>
