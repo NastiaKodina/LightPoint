@@ -1,0 +1,11 @@
+E:\AmazingAppWithMap\AmazingAppWithMap\bin\iPhoneSimulator\Debug\AmazingAppWithMap.exe
+E:\AmazingAppWithMap\AmazingAppWithMap\bin\iPhoneSimulator\Debug\AmazingAppWithMap.pdb
+E:\AmazingAppWithMap\AmazingAppWithMap\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+E:\AmazingAppWithMap\AmazingAppWithMap\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+E:\AmazingAppWithMap\AmazingAppWithMap\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+E:\AmazingAppWithMap\AmazingAppWithMap\obj\iPhoneSimulator\Debug\optimized\
+E:\AmazingAppWithMap\AmazingAppWithMap\obj\iPhoneSimulator\Debug\optimized\Entitlements.plist
+E:\AmazingAppWithMap\AmazingAppWithMap\obj\iPhoneSimulator\Debug\AmazingAppWithMap.exe
+E:\AmazingAppWithMap\AmazingAppWithMap\obj\iPhoneSimulator\Debug\AmazingAppWithMap.pdb
+E:\AmazingAppWithMap\AmazingAppWithMap\obj\iPhoneSimulator\Debug\AmazingAppWithMap.exe.mdb
+E:\AmazingAppWithMap\AmazingAppWithMap\bin\iPhoneSimulator\Debug\AmazingAppWithMap.exe.mdb
